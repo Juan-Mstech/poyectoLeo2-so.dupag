@@ -3,6 +3,7 @@ import { Products } from './model/products';
 import { SelectItem } from 'primeng/api';
 import { Observable} from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable(
     { providedIn: 'root' }
@@ -12,6 +13,7 @@ export class ProductosServices {
 
     constructor(private http: HttpClient) { }
 
+       private url = 'api/products/products.json';
 
     getPctos(id: number): Observable<Products | undefined> {
         return this.getAllProducts().pipe(
@@ -20,7 +22,7 @@ export class ProductosServices {
     }
 
     getAllProducts(): Observable<Products[]> {
-        return this.http.get<Products[]>(this.getProductos().toString()).pipe();
+        return this.http.get<Products[]>(this.url).pipe();
       }
 
     getTipoProductos(): SelectItem[] {

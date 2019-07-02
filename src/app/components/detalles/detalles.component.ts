@@ -25,9 +25,8 @@ export class DetallesComponent implements OnInit {
   }
 
   getProduct(id: number) {
-    this.productService.getProduct(id).subscribe(
-      product => this.product = product,
-      error => this.errorMessage = <any>error);
+    this.productService.getPctos(id).subscribe(
+      product => this.product = product);
   }
 
   onBack(): void {

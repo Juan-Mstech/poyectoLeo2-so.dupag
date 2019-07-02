@@ -14,6 +14,7 @@ import { ButtonModule } from 'primeng/button';
 import { DetallesComponent } from 'src/app/components/detalles/detalles.component';
 import { RouteModule } from 'src/app/components/route/route.module';
 import {AddpctoComponent} from 'src/app/components/addpcto/addpcto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {AddpctoComponent} from 'src/app/components/addpcto/addpcto.component';
     AppRoutingModule,
     DropdownModule,
     ButtonModule,
-    RouteModule
+    RouteModule,
+    HttpClientModule
   ],
 
   providers: [],

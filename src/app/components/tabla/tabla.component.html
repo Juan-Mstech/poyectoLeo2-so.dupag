@@ -45,7 +45,10 @@
                 {{rowData[col.field]}}
             </td>
             <td class="td-btn">
-                <a routerLink='/detalles'>
+
+                    <a routerLink="['/products', product.id]">
+
+                <!-- <a routerLink='/detalles'> -->
                     <button pButton type="submit" label="Detalles" class="ui-button-rounded ui-button-info"></button>
                 </a>
             </td>
